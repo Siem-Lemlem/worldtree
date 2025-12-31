@@ -86,27 +86,27 @@ All tests passing ✓
 | Test | Command | Status |
 |------|---------|--------|
 
-| Compilation | `gcc -Wall wrldtree.c -o wrldtree` | [x] |
+| Compilation | `gcc -Wall wrldtree.c -o wrldtree` | ✓ |
 
-| Help Menu | `./wrldtree --help` | [x] |
+| Help Menu | `./wrldtree --help` | ✓ |
 
-| Preview | `./wrldtree --print` | [x] |
+| Preview | `./wrldtree --print` | ✓ |
 
-| Depth Limit | `./wrldtree --depth 1` | [x] |
+| Depth Limit | `./wrldtree --depth 1` | ✓ |
 
-| Subdirectory | `./wrldtree src --print` | [x] |
+| Subdirectory | `./wrldtree src --print` | ✓ |
 
-| Missing Tags | `./wrldtree` (no tags) | [x] |
+| Missing Tags | `./wrldtree` (no tags) | ✓ |
 
-| Existing Tags | `./wrldtree` (with tags) | [x] |
+| Existing Tags | `./wrldtree` (with tags) | ✓ |
 
-| Multiple Blocks | `./wrldtree --id 2` | [x] |
+| Multiple Blocks | `./wrldtree --id 2` | ✓ |
 
-| Deep Nesting | `./wrldtree --depth 100` | [x] |
+| Deep Nesting | `./wrldtree --depth 100` | ✓ |
 
-| Invalid Path | `./wrldtree fake_dir` | [x] |
+| Invalid Path | `./wrldtree fake_dir` | ✓ |
 
-| Legacy Support | `./wrldtree --id 1` | [x] |
+| Legacy Support | `./wrldtree --id 1` | ✓ |
 
 ## Contributing
 
