@@ -9,13 +9,13 @@ A lightning-fast C utility that automatically generates and maintains directory 
 ### Linux / Mac / WSL
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/yourusername/wrldtree/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/Siem-Lemlem/wrldtree/main/install.sh | bash
 ```
 
 Or manually:
 
 ```bash
-git clone https://github.com/yourusername/wrldtree.git
+git clone https://github.com/Siem-Lemlem/wrldtree.git
 cd wrldtree
 make install
 ```
@@ -23,7 +23,7 @@ make install
 ### Windows
 
 ```cmd
-git clone https://github.com/yourusername/wrldtree.git
+git clone https://github.com/Siem-Lemlem/wrldtree.git
 cd wrldtree
 install.bat
 ```
