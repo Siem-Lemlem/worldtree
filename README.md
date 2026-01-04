@@ -157,8 +157,11 @@ All tests passing ✓
 | Invalid Path | `./wrldtree fake_dir` | ✓ |
 
 | Legacy Support | `./wrldtree --id 1` | ✓ |
+<<<<<<< HEAD
 
 ---
+=======
+>>>>>>> 291d0c09e94947da73b9b0f842e012ccaf884d4b
 
 ## Contributing
 
