@@ -1,21 +1,23 @@
 # 🌳 wrldtree
 
-A lightning-fast C utility that automatically generates and maintains directory tree visualizations in your README.md files.
+A fast C utility that automatically generates and maintains directory tree visualizations in your README.md files.
 
 **Stop manually updating your project structure.** Let `wrldtree` do it for you.
 
-## ⚡ Quick Install
+---
+
+## Quick Install
 
 ### Linux / Mac / WSL
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/yourusername/wrldtree/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/Siem-Lemlem/wrldtree/main/install.sh | bash
 ```
 
 Or manually:
 
 ```bash
-git clone https://github.com/yourusername/wrldtree.git
+git clone https://github.com/Siem-Lemlem/wrldtree.git
 cd wrldtree
 make install
 ```
@@ -23,7 +25,7 @@ make install
 ### Windows
 
 ```cmd
-git clone https://github.com/yourusername/wrldtree.git
+git clone https://github.com/Siem-Lemlem/wrldtree.git
 cd wrldtree
 install.bat
 ```
@@ -34,7 +36,48 @@ Or with MinGW:
 gcc -Wall -O2 wrldtree.c -o wrldtree.exe -std=gnu11
 ```
 
-## Quick Start
+---
+
+## ⚠️ CRITICAL WARNING FOR WINDOWS USERS
+
+**DO NOT use `setx PATH "%PATH%;..."` to add wrldtree to your PATH!**
+
+This command has a **1024-character limit** and will **silently truncate your existing PATH**, breaking other programs like Python, Node.js, VS Code, Git, and more.
+
+### ✅ Safe Installation Methods:
+
+**Method 1: Use a Dedicated Bin Folder (Recommended)**
+
+1. Create a bin folder:
+
+```cmd
+   mkdir C:\bin
+```
+
+2. Copy wrldtree.exe there:
+
+```cmd
+   copy wrldtree.exe C:\bin\
+```
+
+3. Add `C:\bin` to PATH using Windows GUI:
+
+   - Press `Win + R` and type `sysdm.cpl`
+   - Go to **Advanced** → **Environment Variables**
+   - Under **User variables**, select **Path** and click **Edit**
+   - Click **New** and add: `C:\bin`
+   - Click **OK** on all dialogs
+   - Restart your terminal
+
+**Method 2: Just Use the Full Path**
+
+```cmd
+C:\path\to\wrldtree.exe --help
+```
+
+---
+
+## 🚀 Quick Start
 
 1. Add markers to your README.md:
 
@@ -43,13 +86,15 @@ gcc -Wall -O2 wrldtree.c -o wrldtree.exe -std=gnu11
 <!-- WRLDTREE END -->
 ```
 
-1/1. Run wrldtree:
+2. Run wrldtree:
 
 ```bash
 wrldtree
 ```
 
-1/1/1. Your project structure is now auto-documented!
+3 Your project structure is now auto-documented!
+
+---
 
 ## 📖 Usage
 
@@ -69,6 +114,8 @@ EXAMPLES:
   wrldtree --id 2             # Update block marked <!-- WRLDTREE START 2 -->
 ```
 
+---
+
 ## Features
 
 - ✅ **Zero dependencies** - Single C file, compiles in seconds
@@ -79,34 +126,39 @@ EXAMPLES:
 - ✅ **Sorted output** - Alphabetical ordering for consistency
 - ✅ **Fast** - Written in C, processes large projects instantly
 
+---
+
 ## Test Coverage
 
 All tests passing ✓
 
 | Test | Command | Status |
+
 |------|---------|--------|
 
-| Compilation | `gcc -Wall wrldtree.c -o wrldtree` | [x] |
+| Compilation | `gcc -Wall wrldtree.c -o wrldtree` | ✓ |
 
-| Help Menu | `./wrldtree --help` | [x] |
+| Help Menu | `./wrldtree --help` | ✓ |
 
-| Preview | `./wrldtree --print` | [x] |
+| Preview | `./wrldtree --print` | ✓ |
 
-| Depth Limit | `./wrldtree --depth 1` | [x] |
+| Depth Limit | `./wrldtree --depth 1` | ✓ |
 
-| Subdirectory | `./wrldtree src --print` | [x] |
+| Subdirectory | `./wrldtree src --print` | ✓ |
 
-| Missing Tags | `./wrldtree` (no tags) | [x] |
+| Missing Tags | `./wrldtree` (no tags) | ✓ |
 
-| Existing Tags | `./wrldtree` (with tags) | [x] |
+| Existing Tags | `./wrldtree` (with tags) | ✓ |
 
-| Multiple Blocks | `./wrldtree --id 2` | [x] |
+| Multiple Blocks | `./wrldtree --id 2` | ✓ |
 
-| Deep Nesting | `./wrldtree --depth 100` | [x] |
+| Deep Nesting | `./wrldtree --depth 100` | ✓ |
 
-| Invalid Path | `./wrldtree fake_dir` | [x] |
+| Invalid Path | `./wrldtree fake_dir` | ✓ |
 
-| Legacy Support | `./wrldtree --id 1` | [x] |
+| Legacy Support | `./wrldtree --id 1` | ✓ |
+
+---
 
 ## Contributing
 
@@ -118,7 +170,9 @@ PRs welcome! Areas for improvement:
 - JSON/XML output formats
 - Git integration (only show tracked files)
 
-## 📁 Project Structure
+---
+
+## Project Structure
 
 <!-- WRLDTREE START -->
 ```text
@@ -132,14 +186,16 @@ PRs welcome! Areas for improvement:
 ```
 <!-- WRLDTREE END -->
 
-## License
+---
+
+## 📄 License
 
 MIT License - see [LICENSE](LICENSE) file for details.
+
+---
 
 ## Acknowledgments
 
 Built by a developer who got tired of manually updating README trees.
 
----
-
-If `wrldtree` saves you time, star the repo ⭐ and share it with other developers!
+**If `wrldtree` saves you time, star the repo ⭐ and share it with other developers!**
