@@ -141,7 +141,6 @@ wrldtree automatically ignores the following so they never appear in your trees:
 ## Features at a glance
 
 | Feature | Details |
-
 |---|---|
 | Zero dependencies | Single C file, compiles in seconds |
 | Cross-platform | Windows, Linux, Mac |
